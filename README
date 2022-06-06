@@ -1,0 +1,20 @@
+1. Workloads that are increasing in run time will have the
+   turnaround times in SRTN as FCFS because the jobs that arrive
+   earlier will be continue to be completed in FIFO order.
+
+2. Workloads of the same size, with a quantum of 1 will have
+   the same response times between SRTN and RR.
+
+3. The response times increase almost linearly. They will all have to
+   wait longer for the shorter job to complete. But if all of the
+   other jobs also have longer runtimes, the wait time will be added
+   to all of the processes evenly
+
+4. As the quantum increases, the response time will eventually plateau
+   because every thread will just run to completion and then pass off
+   the CPU to the next thread. Worst case response time would be when 
+   each job completes before the next is chosen in Round Robin. If there
+   are N jobs, then the newest job will have to wait N * L, where L is
+   the length of each job in the collection of waiting jobs. This would
+   also assume the the quantum is longer than any length of job, L.
+
